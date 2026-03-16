@@ -249,7 +249,7 @@ body {
   height: 1px;
   top: -30px;
   left: 0;
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
 }
 .benefits__title {
   margin-top: 20px;
@@ -268,4 +268,40 @@ body {
   grid-template-rows: repeat(2, 1fr);
   row-gap: 90px;
   column-gap: 30px;
+}
+
+.quote__bg {
+  background: url(../assets/img/quote_bg.webp) center/cover no-repeat;
+  width: 100%;
+  height: 400px;
+  padding-top: 100px;
+  padding-left: 160px;
+}
+.quote__content {
+  max-width: 710px;
+  color: #fff;
+}
+.quote__title {
+  font-family: "Lato", sans-serif;
+  font-size: 1.78rem;
+  line-height: 1.44;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  position: relative;
+}
+.quote__title::before {
+  content: url(../assets/img/quote_light.svg);
+  width: 102px;
+  height: 84px;
+  position: absolute;
+  top: -30px;
+  left: -60px;
+}
+.quote__text {
+  margin-top: 40px;
+  font-family: "Playfair", serif;
+  font-size: 1.1rem;
+  line-height: 1;
+  font-weight: 300;
+  font-style: italic;
 }/*# sourceMappingURL=main.css.map */
