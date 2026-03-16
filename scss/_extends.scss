@@ -1,0 +1,14 @@
+@use "vars" as v;
+@use "mixins" as m;
+
+%btn {
+  font-family: v.$lato-font-family;
+  @include m.font(1.11rem, 1, 0.08em, 700);
+  text-transform: uppercase;  
+}
+
+%btn-big {
+  padding: 33px 89px;
+  border: 1px solid;
+  min-width: 300px;
+}

@@ -1,0 +1,105 @@
+@use "vars" as v;
+@use "mixins" as m;
+@use "extends";
+@use "keyframes";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  font-family: v.$lato-font-family;
+  font-size: v.$main-font-size;
+  color: v.$main-font-color;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: v.$container-width;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  @include m.flex(space-between, center);
+}
+
+.bg {
+  padding-top: 30px;
+  background: url(../assets/img/bg.webp);
+  // background-size: auto;
+}
+
+.header {
+  background-color: #ffffff05;
+  backdrop-filter: blur(9px);
+  padding: 24px 0;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.menu {
+  @include m.flex(flex-end, center);
+  gap: 30px;
+
+  &__link {
+    color: v.$main-font-color;
+    @include m.font(0.78rem, 1.71, 0.08em, 400);
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background-color: #f1897b4d;
+      transition: all 0.4s;
+
+      opacity: 0;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+        width: 100%;
+      }      
+    }
+
+    &:hover .menu__icon {
+      transform: scale(1.2);
+    }
+  }
+&__icon {
+  width: 24px;
+  height: 24px;
+  color: v.$main-font-color;
+  animation: moveIcon 0.8s ease-in-out 3;
+}
+
+}
+
