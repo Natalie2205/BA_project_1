@@ -66,7 +66,8 @@ body {
 
   &__link {
     color: v.$main-font-color;
-    @include m.font(0.78rem, 1.71, 0.08em, 400);
+    @include m.font(0.78rem, 1.71, 400);
+    letter-spacing: 0.08em;
 
     position: relative;
 
@@ -106,13 +107,17 @@ body {
   font-family: v.$playfair-font-family;
 
   &_1 {
-    @include m.font(2.44rem, 1.18, 0, 400);
+    @include m.font(2.44rem, 1.18, 400);
   }
 
   &_2 {
-    @include m.font(3.78rem, 1.06, 0, 400);
+    @include m.font(3.78rem, 1.06, 400);
+  }
+  &_3 {
+    @include m.font(2.22rem, 1.2, 400);
   }
 }
+
 .italic {
   font-style: italic;
   color: #85bbb1;
@@ -128,7 +133,7 @@ body {
   &__text {
     margin-top: 20px;
     margin-bottom: 50px;
-    @include m.font(1rem, 1.44, 0, 300);
+    @include m.font(1rem, 1.44, 300);
   }
 }
 
@@ -163,7 +168,7 @@ body {
   }
 
   &__box {
-    @include m.font(1rem, 1.44, 0, 300);
+    @include m.font(1rem, 1.44, 300);
     padding: 45px 0;
     background-color: #ffffffe6;
     max-width: 770px;
@@ -213,4 +218,46 @@ body {
 
 .flex-statistic {
   flex-wrap: wrap;
+}
+
+.section {
+  margin-top: 120px;
+}
+
+.benefits {
+  padding-top: 509px;
+
+  &__item {
+    padding: 0 35px;
+    height: 250px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: -30px;
+      left: 0;
+      background-color: #E4E4E4;
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+  }
+
+  &__text {
+    @include m.font(1rem, 1.44, 300);
+    opacity: 80%;
+    margin-top: 30px;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 90px;
+  column-gap: 30px;
 }

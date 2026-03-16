@@ -4,9 +4,9 @@
     align-items: $align;
 }
 
-@mixin font($fontSize, $linHeight, $letSpacing, $fontWeight) {
+@mixin font($fontSize, $linHeight, $fontWeight) {
     font-size: $fontSize;
     line-height: $linHeight;
     font-weight: $fontWeight;
-    letter-spacing: $letSpacing;
+    
 }

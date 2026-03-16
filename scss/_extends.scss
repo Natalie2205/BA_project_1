@@ -3,7 +3,8 @@
 
 %btn {
   font-family: v.$lato-font-family;
-  @include m.font(1.11rem, 1, 0.08em, 700);
+  @include m.font(1.11rem, 1, 700);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   border: none; 
 }
