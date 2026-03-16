@@ -46,13 +46,15 @@ body {
 
 .bg {
   padding-top: 30px;
-  background: url(../assets/img/bg.webp);
-  // background-size: auto;
+  padding-bottom: 430px;
+  background: url(../assets/img/bg.webp) center / cover no-repeat;
+  
+  
 }
 
 .header {
   background-color: #ffffff05;
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(5px);
   padding: 24px 0;
 }
 
@@ -100,6 +102,47 @@ body {
   color: v.$main-font-color;
   animation: moveIcon 0.8s ease-in-out 3;
 }
-
 }
 
+.title {
+  font-family: v.$playfair-font-family;
+
+  &_1{
+     @include m.font(2.44rem, 1.18, 0, 400);
+  }
+}
+.italic {
+  font-style: italic;
+  color: #85BBB1;
+}
+
+.hero {
+  margin-top: 150px;
+
+  &__content {
+    max-width: 525px;
+  }
+
+  &__descr {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    @include m.font(1rem, 1.44, 0, 300);
+
+  }
+}
+
+.btn {
+  @extend %btn;
+  color: v.$btn-coral;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -4px;
+    width: 98%;
+    height: 13px;
+    background-color: #f1897b4d;
+  }
+}
