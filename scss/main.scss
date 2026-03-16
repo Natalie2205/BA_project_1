@@ -156,11 +156,11 @@ body {
     background-color: #f1897b4d;
   }
   &:hover {
-    color: v.$btn-coral-dark;    
+    color: v.$btn-coral-dark;
   }
 
   &:hover .btn::after {
-    background-color: #E54F3A4d;
+    background-color: #e54f3a4d;
   }
 }
 
@@ -168,7 +168,7 @@ body {
   @extend %btn;
   @extend %btn-big;
   color: v.$btn-coral;
-  border-color: #E4E4E4;  
+  border-color: #e4e4e4;
   position: relative;
 
   &::after {
@@ -182,13 +182,12 @@ body {
   }
   &:hover {
     color: v.$btn-coral-dark;
-    border-color: v.$btn-coral-dark;   
+    border-color: v.$btn-coral-dark;
   }
 
   &:hover .btn::after {
-    background-color: #E54F3A4d;
+    background-color: #e54f3a4d;
   }
-
 }
 
 .statistic {
@@ -363,7 +362,7 @@ body {
     height: 540px;
   }
 
-   &__box {
+  &__box {
     @include m.font(1rem, 1.44, 300);
     padding: 75px 0 75px 70px;
     background-color: #ffffffe6;
@@ -372,10 +371,10 @@ body {
 
   &__grid {
     display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 70px;
-  column-gap: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 70px;
+    column-gap: 100px;
   }
 
   &__item {
@@ -388,4 +387,58 @@ body {
     @include m.font(1rem, 1.44, 300);
     opacity: 80%;
   }
+}
+
+.flex-reviews {
+  @include m.flex(space-between, center);
+  gap: 30px;
+}
+
+.reviews {
+  &__descr {
+    margin-top: 20px;
+    @include m.font(1rem, 1.44, 300);
+    opacity: 80%;
+    margin-bottom: 50px;
+  }
+
+  &__card {
+    padding: 30px 40px;
+    height: 340px;
+    width: 100%;
+    color: #fff;
+    flex-grow: 1;
+
+    &_1 {
+      background: url(../assets/img/review_1_bg.webp) center / cover no-repeat;
+    }
+
+     &_2 {
+      background: url(../assets/img/review_2_bg.webp) center / cover no-repeat;
+    }
+
+     &_3 {
+      background: url(../assets/img/review_3_bg.webp) center / cover no-repeat;
+    }
+  }
+
+  &__text {
+    @include m.font(1rem, 1.44, 300);
+  }
+
+  &__author {
+    font-family: v.$playfair-font-family;
+    @include m.font(1.1rem, 1, 300);
+    letter-spacing: 0.08em;
+    font-style: italic;
+    
+    
+    
+  }
+}
+
+.flex-card {
+  @include m.flex(space-between, flex-start);
+  flex-direction: column; 
+  height: 100%;   
 }
