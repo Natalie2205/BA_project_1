@@ -116,8 +116,6 @@ body {
   &_3 {
     @include m.font(2.22rem, 1.2, 400);
   }
-
-  
 }
 
 .italic {
@@ -265,7 +263,6 @@ body {
 }
 
 .quote {
-
   &__bg {
     background: url(../assets/img/quote_bg.webp) center / cover no-repeat;
     width: 100%;
@@ -292,9 +289,7 @@ body {
       position: absolute;
       top: -30px;
       left: -60px;
-
     }
-    
   }
 
   &__text {
@@ -302,5 +297,22 @@ body {
     font-family: v.$playfair-font-family;
     @include m.font(1.1rem, 1, 300);
     font-style: italic;
+  }
+}
+
+.video {
+  &__container {
+    padding: 0 100px;
+  }
+
+  &__screen {
+    margin-bottom: 50px;
+    border-radius: 32px; 
+  }
+
+  &__descr {
+    @include m.font(1rem, 1.44, 300);
+    opacity: 80%;
+    margin-top: 20px;
   }
 }

@@ -304,4 +304,19 @@ body {
   line-height: 1;
   font-weight: 300;
   font-style: italic;
+}
+
+.video__container {
+  padding: 0 100px;
+}
+.video__screen {
+  margin-bottom: 50px;
+  border-radius: 32px;
+}
+.video__descr {
+  font-size: 1rem;
+  line-height: 1.44;
+  font-weight: 300;
+  opacity: 80%;
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */
