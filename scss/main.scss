@@ -116,6 +116,10 @@ body {
   &_3 {
     @include m.font(2.22rem, 1.2, 400);
   }
+
+  &_4 {
+    @include m.font(1.33rem, 2, 400);
+  }
 }
 
 .italic {
@@ -151,6 +155,40 @@ body {
     height: 13px;
     background-color: #f1897b4d;
   }
+  &:hover {
+    color: v.$btn-coral-dark;    
+  }
+
+  &:hover .btn::after {
+    background-color: #E54F3A4d;
+  }
+}
+
+.btn-big {
+  @extend %btn;
+  @extend %btn-big;
+  color: v.$btn-coral;
+  border-color: #E4E4E4;  
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 99px;
+    bottom: 30px;
+    width: 37%;
+    height: 13px;
+    background-color: #f1897b4d;
+  }
+  &:hover {
+    color: v.$btn-coral-dark;
+    border-color: v.$btn-coral-dark;   
+  }
+
+  &:hover .btn::after {
+    background-color: #E54F3A4d;
+  }
+
 }
 
 .statistic {
@@ -307,12 +345,47 @@ body {
 
   &__screen {
     margin-bottom: 50px;
-    border-radius: 32px; 
+    border-radius: 32px;
   }
 
   &__descr {
     @include m.font(1rem, 1.44, 300);
     opacity: 80%;
     margin-top: 20px;
+  }
+}
+
+.promises {
+  &__container {
+    background: url(../assets/img/features_bg.webp) left top / contain no-repeat;
+    padding: 45px 0 45px 400px;
+    width: 100%;
+    height: 540px;
+  }
+
+   &__box {
+    @include m.font(1rem, 1.44, 300);
+    padding: 75px 0 75px 70px;
+    background-color: #ffffffe6;
+    max-width: 770px;
+  }
+
+  &__grid {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 70px;
+  column-gap: 100px;
+  }
+
+  &__item {
+    width: 300px;
+    height: 115px;
+  }
+
+  &__text {
+    margin-top: 15px;
+    @include m.font(1rem, 1.44, 300);
+    opacity: 80%;
   }
 }
