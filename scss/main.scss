@@ -492,3 +492,28 @@ input {
 input:focus-visible {
     outline: none;
 }
+
+.footer {
+  padding: 30px 0;
+
+  &__text {
+    @include m.font(0.78rem, 1.86, 300);
+    opacity: 60%;
+  }
+
+  &__links {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__link {
+    @include m.font(0.78rem, 1.71, 400);
+    color: v.$main-font-color;
+    
+  }
+}
+
+.author {
+  display: flex;
+  gap: 12px;
+}
