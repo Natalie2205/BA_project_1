@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  // outline: 1px solid red;
 }
 
 ul,
@@ -68,6 +69,8 @@ body {
   background-color: #ffffff05;
   backdrop-filter: blur(5px);
   padding: 24px 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .nav {
