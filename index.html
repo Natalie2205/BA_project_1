@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Solis</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,15 +24,19 @@
                             <img src="./assets/img/logo.png" alt="Logo Company" class="logo__img">
                         </div>
                         <nav class="nav">
+
+                            <input type="checkbox" id="nav-burger" class="nav__burger burger">
+                            <label for="nav-burger" class="burger__img"></label>
+
                             <ul class="menu">
                                 <li class="menu__item">
                                     <a href="#" class="menu__link">Home</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">About</a>
+                                    <a href="#info" class="menu__link">About</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Products</a>
+                                    <a href="#products" class="menu__link">Products</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="#" class="menu__link">Use Cases</a>
@@ -40,15 +45,15 @@
                                     <a href="#" class="menu__link">Pricing</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Resources</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">
-                                        <img src="./assets/img/moon.svg" alt="Moon icon" class="menu__icon">
-                                    </a>
+                                    <a href="#footer" class="menu__link">Resources</a>
                                 </li>
                             </ul>
                         </nav>
+                        <div class="dark">
+                            <a href="#" class="dark__link">
+                                <img src="./assets/img/moon.svg" alt="Moon icon" class="menu__icon">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -64,7 +69,7 @@
                 </div>
             </section>
         </div>
-        <section class="statistic">
+        <section class="statistic" id="info">
             <div class="container statistic__container">
                 <div class="statistic__box">
                     <div class="flex-container flex-statistic">
@@ -110,7 +115,7 @@
                 </div>
             </div>
         </section>
-        <section class="benefits">
+        <section class="benefits" id="products">
             <div class="container">
                 <div class="grid-container">
                     <div class="benefits__item">
@@ -158,7 +163,7 @@
         </section>
         <section class="section video">
             <div class="container video__container">
-                <iframe class="video__screen" width="970" height="601"
+                <iframe class="video__screen" 
                     src="https://www.youtube.com/embed/vnbN9V_2Guk?si=WYyJ3jH5xyGjKfke" title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -247,7 +252,8 @@
             <div class="container contact__container">
                 <div class="flex-contact">
                     <div class="heading">
-                        <h3 class="title title_3 contact__title">Contact <span class="italic">our sales team</span> </h3>
+                        <h3 class="title title_3 contact__title">Contact <span class="italic">our sales team</span>
+                        </h3>
                         <p class="contact__text">Our team is happy to answer your sales questions. <br> Fill out the
                             form and we’ll be in touch as soon as possible.</p>
                     </div>
@@ -270,13 +276,13 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
-            <div class="flex-container">
+            <div class="flex-container flex-footer">
                 <p class="footer__text">© 2020 Solisgroup. All Rights Reserved.</p>
                 <div class="author">
-                    <p class="footer__text">made by</p> 
-                    <a href="#" class="footer__link">Zgraya.digital</a>                
+                    <p class="footer__text">made by</p>
+                    <a href="#" class="footer__link">Zgraya.digital</a>
                 </div>
                 <ul class="footer__links">
                     <li class="footer__item">
