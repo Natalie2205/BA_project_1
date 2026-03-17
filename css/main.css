@@ -56,6 +56,8 @@ body {
   font-size: 18px;
   color: #262A3F;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -97,8 +99,6 @@ body {
   background-color: rgba(255, 255, 255, 0.0196078431);
   backdrop-filter: blur(5px);
   padding: 24px 0;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .nav {
@@ -119,13 +119,12 @@ body {
 }
 @media screen and (max-width: 768px) {
   .menu {
-    position: fixed;
+    position: absolute;
     right: -100%;
     top: 65px;
     opacity: 0;
     flex-direction: column;
     background-color: #e4e4e4;
-    padding: 0 0;
     transition: all 0.5s;
     width: 100%;
     gap: 0;
