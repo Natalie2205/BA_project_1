@@ -7,7 +7,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // outline: 1px solid red;
 }
 
 ul,
@@ -71,7 +70,6 @@ body {
   background-color: #ffffff05;
   backdrop-filter: blur(5px);
   padding: 24px 0;
-  
 }
 
 .nav {
@@ -79,7 +77,6 @@ body {
   @media screen and (max-width: 768px) {
     order: 2;
     flex-grow: 0;
-    
   }
 }
 
@@ -123,7 +120,7 @@ body {
       left: 0;
       height: 3px;
       width: 0;
-      background-color: #f1897b4d;
+      background-color: v.$btn-coral;
       transition: all 0.4s;
 
       opacity: 0;
@@ -131,13 +128,9 @@ body {
 
     &:hover {
       &::after {
-        opacity: 1;
+        opacity: 30%;
         width: 100%;
       }
-    }
-
-    &:hover .menu__icon {
-      transform: scale(1.2);
     }
   }
   &__icon {
@@ -147,6 +140,10 @@ body {
     color: v.$main-font-color;
     animation: moveIcon 0.8s ease-in-out 3;
   }
+}
+
+.theme__link:hover .menu__icon {
+  transform: scale(1.2);
 }
 
 .burger {
@@ -212,7 +209,7 @@ body {
   &_2 {
     @include m.font(3.78rem, 1.06, 400);
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 992px) {
       font-size: 2rem;
     }
   }
@@ -295,14 +292,14 @@ body {
 
 .statistic {
   position: relative;
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 768px) {
     position: static;
   }
 
   &__container {
     background: url(../assets/img/buildings_img.webp) left top / contain
       no-repeat;
-    padding: 45px 0 45px 400px;
+    padding: 45px 0 45px 27.8vw;
     position: absolute;
     top: -280px;
     left: calc(calc(100vw - v.$container-width) / 2);
@@ -310,39 +307,45 @@ body {
     height: 670px;
 
     @media screen and (max-width: 992px) {
-      background: url(../assets/img/buildings_img_tab.webp) center / contain
+      background: url(../assets/img/buildings_img_tab.webp) center / cover
         no-repeat;
       position: static;
-      padding: 30px 0 0 0;
+      padding: 25px;
       height: auto;
     }
     @media screen and (max-width: 576px) {
-      background: url(../assets/img/buildings_img_mob.webp) center / contain
+      background: url(../assets/img/buildings_img_mob.webp) center / cover
         no-repeat;
     }
   }
 
   &__box {
     @include m.font(1rem, 1.44, 300);
-    padding: 45px 0;
+    padding: 3.1vw 0;
     background-color: #ffffffe6;
     max-width: 770px;
 
     @media screen and (max-width: 992px) {
-      padding: 0;
+      padding: 15px;
+      margin: 0 auto;
     }
   }
 
   &__list {
     @include m.flex(center, center);
     flex-direction: column;
-    gap: 80px;
-    padding: 0 56px;
+    gap: 5.6vw;
+    padding: 0 3.9vw;
     text-align: center;
     @media screen and (max-width: 992px) {
-      gap: 40px;
+      gap: 30px;
       padding: 0 32px;
     }
+    @media screen and (max-width: 768px) {
+      flex-direction: row;
+      width: 100%;
+    }
+
     @media screen and (max-width: 576px) {
       gap: 20px;
       padding: 0 15px;
@@ -360,6 +363,16 @@ body {
         bottom: -40px;
         left: 50%;
         transform: translateX(-50%);
+        @media screen and (max-width: 992px) {
+          bottom: -15px;
+        }
+        @media screen and (max-width: 768px) {
+          width: 1px;
+          height: 100%;
+          bottom: 0;
+          left: 100%;
+          transform: translateX(15px);
+        }
       }
     }
 
@@ -373,6 +386,11 @@ body {
     max-width: 400px;
     align-self: flex-start;
 
+    @media screen and (max-width: 768px) {
+      align-self: center;
+      max-width: 100%;
+    }
+
     @media screen and (max-width: 576px) {
       align-self: center;
     }
@@ -384,14 +402,19 @@ body {
 
   &__btn {
     margin-top: 50px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+    }
   }
 }
 
 .flex-statistic {
-  flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    gap: 20px;
+  }
   @media screen and (max-width: 576px) {
-    flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 }
 
@@ -414,7 +437,6 @@ body {
     padding-top: 150px;
   }
 
- 
   &__item {
     padding: 0 35px;
     height: 250px;
@@ -461,17 +483,21 @@ body {
     background: url(../assets/img/quote_bg.webp) center / cover no-repeat;
     width: 100%;
     height: 400px;
-    padding-left: 160px;
+    padding-left: 11.1vw;
     position: relative;
+    padding-top: 100px;
 
     @media screen and (max-width: 992px) {
       background: url(../assets/img/quote_bg_tab.webp) center / cover no-repeat;
-      padding-left: 50px;
+      padding-right: 30px;
+      padding-top: 70px;
     }
 
     @media screen and (max-width: 576px) {
       background: url(../assets/img/quote_bg_mob.webp) center / cover no-repeat;
-      padding-left: 30px;
+      padding-top: 50px;
+      padding-bottom: 30px;
+      height: 100%;
     }
   }
 
@@ -494,10 +520,14 @@ body {
       left: 100px;
 
       @media screen and (max-width: 992px) {
-      left: 50px;
-    }
+        left: 50px;
+        top: 40px;
+      }
 
-      
+      @media screen and (max-width: 576px) {
+        left: 40px;
+        top: 20px;
+      }
     }
   }
 
@@ -513,31 +543,32 @@ body {
   &__container {
     padding: 0 100px;
     @media screen and (max-width: 992px) {
-      width: 80%;
-      height: auto;
-      padding: 0 30px;
+      padding: 0 60px;
     }
-
     @media screen and (max-width: 576px) {
-      padding: 0;
+      padding: 0 30px;
     }
   }
 
-  &__screen {
-    width: 970px;
-    height: 601px;
+  &__box {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 61.96%;
+    overflow: hidden;
     margin-bottom: 50px;
+  }
+
+  &__screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 32px;
 
-    @media screen and (max-width: 992px) {
-      width: 570px;
-      height: 354px;
+    @media screen and (max-width: 768px) {
       border-radius: 8px;
-     
-    }
-    @media screen and (max-width: 576px) {
-      width: 300px;
-      height: 186px;
     }
   }
 
@@ -551,14 +582,14 @@ body {
 .promises {
   &__container {
     background: url(../assets/img/features_bg.webp) left top / contain no-repeat;
-    padding: 45px 0 45px 400px;
+    padding: 45px 0 45px 27.78vw;
     width: 100%;
     height: 540px;
 
     @media screen and (max-width: 992px) {
-      background: url(../assets/img/features_bg_tab.webp) center / contain
+      background: url(../assets/img/features_bg_tab.webp) center / cover
         no-repeat;
-      padding: 30px 0 0 0;
+      padding: 30px;
       height: auto;
     }
   }
@@ -569,32 +600,23 @@ body {
     background-color: #ffffffe6;
     max-width: 770px;
     @media screen and (max-width: 992px) {
-      padding: 0;   
-      margin: 0 auto;   
+      padding: 20px;
+      margin: 0 auto;
     }
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     row-gap: 70px;
     column-gap: 100px;
-
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
-      row-gap: 30px;
-    }
   }
 
   &__item {
     width: 300px;
     height: 115px;
     @media screen and (max-width: 768px) {
-    text-align: center;
-    width: 100%;
-  }
+      text-align: center;
+      width: 100%;
+    }
   }
 
   &__text {
@@ -627,7 +649,7 @@ body {
     height: 340px;
     width: 370px;
     color: #fff;
-    
+
     &_1 {
       background: url(../assets/img/review_1_bg.webp) center / cover no-repeat;
     }
@@ -662,6 +684,12 @@ body {
 .contact {
   margin-top: 100px;
 
+  &__heading {
+    @media screen and (max-width: 992px) {
+      max-width: 350px;
+    }
+  }
+
   &__container {
     padding-top: 60px;
     padding-bottom: 100px;
@@ -682,11 +710,14 @@ body {
 
 .flex-contact {
   @include m.flex(space-between, flex-start);
-  gap: 230px;
+  gap: 15.97vw;
+
+  @media screen and (max-width: 992px) {
+    gap: 50px;
+  }
 
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
-    gap: 50px;
   }
 }
 
@@ -707,14 +738,18 @@ body {
   margin-bottom: 40px;
   padding-bottom: 12px;
   border-bottom: 1px solid #262a3f1a;
+  display: flex;
+  gap: 10px;
 }
 
 input {
   border: none;
+  flex-grow: 1;
 }
 
 input:focus-visible {
   outline: none;
+  border-bottom: 1px solid v.$btn-coral-dark;
 }
 
 .footer {
@@ -734,8 +769,7 @@ input:focus-visible {
     @include m.font(0.78rem, 1.71, 400);
     color: v.$main-font-color;
 
-    &:hover {
-      color: darken($color: v.$main-font-color, $amount: 3);
+    &:hover {      
       font-weight: 700;
     }
   }
@@ -749,5 +783,103 @@ input:focus-visible {
 .flex-footer {
   @media screen and (max-width: 576px) {
     flex-direction: column;
+  }
+}
+
+.dark {
+  background-color: v.$bg-dark;
+  color: #fff;
+
+  &__bg {
+    background: url(../assets/img/bg_dark.webp) center / cover no-repeat;
+
+    @media screen and (max-width: 992px) {
+      background: url(../assets/img/bg_dark_tab.webp) center / cover no-repeat;
+    }
+
+    @media screen and (max-width: 576px) {
+      background: url(../assets/img/bg_dark_mob.webp) center / cover no-repeat;
+    }
+  }
+
+  &__header {
+    background-color: #16192605;
+  }
+
+  &__link {
+    color: #fff;
+    background-color: #16192605;
+    &::after {
+      background-color: v.$btn-green;
+    }
+  }
+
+  &__italic {
+    color: #689ff2;
+  }
+
+  &__btn {
+    color: v.$btn-green;
+
+    &::after {
+      background-color: #53f3cd4d;
+    }
+    &:hover {
+      color: v.$btn-green-dark;
+    }
+
+    &:hover .btn::after {
+      background-color: #02e0ab4d;
+    }
+  }
+
+  &__box {
+    background-color: #161926;
+    opacity: 90%;
+  }
+
+  &__benefits-item {
+    &::before {
+      background-color: #515773;
+    }
+  }
+
+  &__quote {
+    &::before {
+      content: url(../assets/img/quote_dark.svg);
+    }
+  }
+
+  &__btn-big {
+  color: v.$btn-green;
+  border-color: #515773;
+  
+  &::after {    
+    background-color: #53F3CD4d;
+  }
+  &:hover {
+    color: v.$btn-green-dark;
+    border-color: v.$btn-green-dark;
+  }
+
+  &:hover .btn::after {
+    background-color: #53F3CD4d;
+  }
+}
+
+  &__container {   
+    border-color: #515773;
+  }
+
+  &__row {
+    border-bottom: 1px solid #ffffff1a;
+  }
+
+  &__input {
+    background-color: v.$bg-dark;
+    &:focus-visible {
+  
+  border-bottom: 1px solid v.$btn-green-dark;
+}
   }
 }
